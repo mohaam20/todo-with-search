@@ -314,7 +314,7 @@ function comeBack(taill){
 
 
 function startSearch(e){
-    let piss = e.target.value.trim()
+    let piss = e.target.value.toLowerCase().trim()
     console.log(piss)
     let fiss = document.querySelectorAll("p")
     fiss.forEach(user => {
