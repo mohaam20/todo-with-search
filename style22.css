@@ -37,7 +37,7 @@ button:hover i{
 
 body{background-repeat: no-repeat; 
     height: 100vh; color: rgb(255, 255, 255);
-    background-color: #06283D;
+    background-color: #06283D;   overflow-y: hidden;
      display: flex; flex-direction: column; align-items:center;
     }
 
