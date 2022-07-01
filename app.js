@@ -49,6 +49,7 @@ function women(event){
             gestt.remove()
         }
         panel.classList.add("falll")
+        panel.style.position = "absolute"
         setTimeout(bob,1000,panel)
     }
     else if(btnnn.className== "checkLogo" && panel.className == "glass"){   
@@ -319,13 +320,22 @@ function startSearch(e){
     let fiss = document.querySelectorAll("p")
     fiss.forEach(user => {
         if(user.className !== "alert" && piss.length !== 0 ){
-            user.parentNode.style.display = "none"
+            user.parentNode.style.position= "absolute"
+            user.parentNode.style.top = "100%"
+            user.parentNode.style.zIndex = "-1";
+            
         }
         if(user.innerText.toLowerCase().trim().includes(piss) && piss.length !== 0 && user.className !== "alert"){
-            user.parentNode.style.display = "flex"
+            user.parentNode.style.position= "static"
+            user.parentNode.style.top = "0" 
+            user.parentNode.style.zIndex = "1";
+  
         }
         if(piss.length == 0){
-            user.parentNode.style.display = "flex"
+            user.parentNode.style.position= "static"
+            user.parentNode.style.top = "0"
+            user.parentNode.style.zIndex = "1";
+
         }
     } )
         

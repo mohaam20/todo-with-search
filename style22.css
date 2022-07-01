@@ -10,6 +10,13 @@
 
 }
 
+
+.todo-container{
+    position: relative;
+    min-height: 20rem !important;
+    min-width: 485px;
+}
+
 .todo-iput{width: 22rem; max-width: 50vw;}
 .tops{
     justify-content: center;
