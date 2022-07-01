@@ -315,13 +315,13 @@ function comeBack(taill){
 
 
 function startSearch(e){
-    let piss = e.target.value.toLowerCase().trim()
+    let piss = e.target.value.toLowerCase().trim() 
     console.log(piss)
     let fiss = document.querySelectorAll("p")
     fiss.forEach(user => {
         if(user.className !== "alert" && piss.length !== 0 ){
             user.parentNode.style.position= "absolute"
-            user.parentNode.style.top = "100%"
+            user.parentNode.style.top = "50vh"
             user.parentNode.style.zIndex = "-1";
             
         }
