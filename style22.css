@@ -39,7 +39,6 @@ body{background-repeat: no-repeat;
     height: 100vh; color: rgb(255, 255, 255);
     background-color: #06283D;
      display: flex; flex-direction: column; align-items:center;
-     overflow-y: hidden;
     }
 
 header{margin: 2rem;}    
@@ -221,8 +220,13 @@ li p{ border: 2px solid black ;   flex-grow: 2;
 
 
 
-.searchh{font-size: 2rem; display: flex; flex-direction: row-reverse; gap: 1rem; align-items: center; max-width: 70vw;}
-.searchh input{border-radius: 0.5rem; height: 3rem; width: 20rem; appearance: none; border: none; padding: 0 2rem;}
+.searchh{font-size: 2rem;
+     display: flex; flex-direction: row-reverse;
+      gap: 1rem; align-items: center;
+      width: 485px; 
+       max-width: 80vw; margin-top: 2rem;
+    }
+.searchh input{border-radius: 0.5rem; height: 3rem; width: 100%;  appearance: none; border: none; padding: 0 2rem;}
 .searchh label{background-color: white; height: 100%; width: 3rem;
      display: flex; justify-content: center;cursor: pointer;
       align-items: center; border-radius: 0.5rem;}
@@ -241,6 +245,8 @@ li p{ border: 2px solid black ;   flex-grow: 2;
     .alert{ display: none; }
     .edit-field{  width: 90%;
         height:calc(100% - 5rem);
+    }
+    body{overflow-y: hidden;
     }
     p{justify-self: left; align-self: flex-end; width: 90%; min-height: 4rem; align-items: center;}
     
