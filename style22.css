@@ -226,8 +226,8 @@ li p{ border: 2px solid black ;   flex-grow: 2;
       width: 485px; 
        max-width: 80vw; margin-top: 2rem;
     }
-.searchh input{border-radius: 0.5rem; height: 3rem; width: 100%;  appearance: none; border: none; padding: 0 2rem;}
-.searchh label{background-color: white; height: 100%; width: 3rem;
+.searchh input{border-radius: 0.5rem; height: 3rem; width: 100%;  appearance: none; border: none; padding: 0 2rem;   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);}
+.searchh label{   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333); background-color: white; height: 100%; width: 3rem;
      display: flex; justify-content: center;cursor: pointer;
       align-items: center; border-radius: 0.5rem;}
 .searchh label:hover{ background-color: #1363DF;}
