@@ -323,18 +323,21 @@ function startSearch(e){
             user.parentNode.style.position= "absolute"
             user.parentNode.style.bottom = "200%"
             user.parentNode.style.zIndex = "-1";
+            user.parentNode.style.opacity = "0";
             
         }
         if(user.innerText.toLowerCase().trim().includes(piss) && piss.length !== 0 && user.className !== "alert"){
             user.parentNode.style.position= null
             user.parentNode.style.top = null
             user.parentNode.style.zIndex = null
-  
+            user.parentNode.style.opacity = null
+
         }
         if(piss.length == 0){
             user.parentNode.style.position= null
             user.parentNode.style.top = null
             user.parentNode.style.zIndex = null
+            user.parentNode.style.opacity = null
 
         }
     } )
