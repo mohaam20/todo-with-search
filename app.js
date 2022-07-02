@@ -6,6 +6,7 @@ const droped = document.querySelector("select")
 const allField = document.querySelector("input")
 const lense = document.querySelector('label')
 const searchArea = document.querySelector("#search-bar")
+const clearBtn = document.querySelector(".clear-all")
 const activee = document.activeElement;
 
 const kid = todobutton.parentNode
@@ -13,6 +14,7 @@ const kid = todobutton.parentNode
 
 
 window.addEventListener('DOMContentLoaded',readLocal)
+clearBtn.addEventListener("click",clearTodo)
 searchArea.addEventListener("input",startSearch)
 todobutton.addEventListener("click",addTodo)
 todolist.addEventListener("click",women,true)
@@ -345,3 +347,13 @@ function startSearch(e){
    
 }
 
+function clearTodo(){
+    let currentList = todolist.children
+    console.log(currentList)
+    console.log(Array.from(currentList))
+    
+    Array.from(currentList).forEach(li => {
+       li.remove()
+       dellLocal(li.innerText)
+    });
+}

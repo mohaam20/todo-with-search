@@ -106,6 +106,8 @@ form input{
      text-transform: capitalize;
      border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px);   float: left; overflow: hidden; padding:0 0 0 1rem  ;}
 button{
+    border: none;
+    font-size: 2rem;
     border-radius: 00.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -126,7 +128,68 @@ li button:hover{
     background-color: #1363DF;
 }
 
+.clear-all{margin:0 2%; height: 4rem; display: flex; flex-direction: column;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333); position: relative;}
+.clear-all h2{font-size: 0.5rem; color: #1363DF; margin-top: 0.2rem; height: 10px !important; display: none;}
+.clear-all i{color: #1363DF;}
+.clear-all:hover{background-color: #1363DF;}
+.clear-all::before{
+    content: "clear all";
+    font-family:'Lalezar';
+    white-space: nowrap;
+    word-wrap: none;
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.377);
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    
+    visibility: hidden;
+    transition-duration: 600ms;
+    z-index: -1;
+}
 
+.clear-all:hover::before{visibility: visible; right: 110%; padding: 0.5rem 1rem;}
+
+
+.todo-button::after{
+    content: "submit";
+    font-family:'Lalezar';
+    white-space: nowrap;
+    word-wrap: none;
+    position: absolute;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.377);
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    
+    visibility: hidden;
+    transition-duration: 600ms;
+    z-index: -1;
+}
+
+.searchh:focus::after{visibility: visible; left: 105%; padding: 0.5rem 1rem;}
+.searchh::after{
+    content: "clear all";
+    font-family:'Lalezar';
+    white-space: nowrap;
+    word-wrap: none;
+    position: absolute;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.377);
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    
+    visibility: hidden;
+    transition-duration: 600ms;
+    z-index: -1;
+}
+
+.todo-button:hover::after{visibility: visible; left: 105%; padding: 0.5rem 1rem;}
 .todo-container{min-height: 5rem; margin:2rem;
     max-height: 25rem;
     overflow: auto;
@@ -240,23 +303,46 @@ li p{ border: 2px solid black ;   flex-grow: 2;
 }
 
 @media only screen and (max-width: 767px) {
-    header{margin-top: 5rem;}
+    header{margin-top: 2rem; margin-bottom: 0;}
     li{width: 100%; flex-wrap: wrap; justify-content: center;}
     .todo-container{width: 80vw; min-width: auto !important;}
     .alert{ display: none; }
     .edit-field{  width: 90%;
         height:calc(100% - 5rem);
     }
+    .form-pack{width: 80vw !important; max-width: 80vw;}
     body{overflow-y: hidden;
     }
     p{justify-self: left; align-self: flex-end; width: 90%; min-height: 4rem; align-items: center;}
     
     button{height: 50px;margin: 0.5rem; } 
-    
+    .tops{width: 80vw; flex-wrap: wrap; gap: 1rem; flex-flow:flex-end !important;}
     .searchh label{padding: 0 1rem; }
+    h2{display: block !important;}
+    .clear-all:hover::before{display: none !important;}
+    .todo-button:hover::after{display: none !important;}
 }
 
+@media (hover: none) and (pointer: coarse) {
+    header{margin-top: 2rem; margin-bottom: 0;}
+    li{width: 100%; flex-wrap: wrap; justify-content: center;}
+    .todo-container{width: 80vw; min-width: auto !important;}
+    .alert{ display: none; }
+    .edit-field{  width: 90%;
+        height:calc(100% - 5rem);
+    }
+    .form-pack{width: 80vw !important; max-width: 80vw;}
+    body{overflow-y: hidden;
+    }
+    p{justify-self: left; align-self: flex-end; width: 90%; min-height: 4rem; align-items: center;}
     
+    button{height: 50px;margin: 0.5rem; } 
+    .tops{width: 80vw; }
+    .searchh label{padding: 0 1rem; }
+    h2{display: block !important;}
+    .clear-all:hover::before{display: none !important;}
+    .todo-button:hover::after{display: none !important;}
+}
     
 /** For mobile devices **/
 @media (max-width: 767px) {
