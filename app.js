@@ -289,11 +289,13 @@ function unFoucs(event){
     let boxes = document.querySelectorAll(".editor")
     if(event.target.nodeName == "BODY" || event.target.nodeName == "UL" || event.target.nodeName == "LI"){
         console.log(event.target.nodeName)
-        for(let i of opend){
-            i.style.display = "none"
-        }
         for(let t of boxes){
             t.innerHTML = '<i class="fa-solid fa-pen"></i>' 
+        }
+    }
+    if(event.target.className !== "edit-field" && event.target.className !== "editor"){
+        for(let i of opend){
+            i.style.display = "none"
         }
     }
 }
