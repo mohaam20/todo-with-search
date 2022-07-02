@@ -315,26 +315,26 @@ function comeBack(taill){
 
 
 function startSearch(e){
-    let piss = e.target.value.toLowerCase().trim() 
+    let piss = e.target.value.toLowerCase().trim()
     console.log(piss)
     let fiss = document.querySelectorAll("p")
     fiss.forEach(user => {
         if(user.className !== "alert" && piss.length !== 0 ){
             user.parentNode.style.position= "absolute"
-            user.parentNode.style.top = "50vh"
+            user.parentNode.style.bottom = "200%"
             user.parentNode.style.zIndex = "-1";
             
         }
         if(user.innerText.toLowerCase().trim().includes(piss) && piss.length !== 0 && user.className !== "alert"){
             user.parentNode.style.position= null
-            user.parentNode.style.top = "0" 
-            user.parentNode.style.zIndex = "1";
+            user.parentNode.style.top = null
+            user.parentNode.style.zIndex = null
   
         }
         if(piss.length == 0){
             user.parentNode.style.position= null
-            user.parentNode.style.top = "0"
-            user.parentNode.style.zIndex = "1";
+            user.parentNode.style.top = null
+            user.parentNode.style.zIndex = null
 
         }
     } )
