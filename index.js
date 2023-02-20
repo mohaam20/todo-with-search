@@ -65,7 +65,7 @@ function login() {
 
       // Push to Firebase Database
       database_ref.child("users/" + user.uid).update(user_data);
-
+      outlog.classList.toggle("hidden");
       // DOne
       alert("User Logged In!!");
     })
@@ -187,6 +187,7 @@ outlog.addEventListener("pointerup", () => {
       todolist.innerHTML = "";
       localStorage.setItem("todos", JSON.stringify([]));
       localStorage.setItem("checked", JSON.stringify([]));
+      outlog.classList.add("hidden");
       readLocal();
       // Sign-out successful.
     })
@@ -236,6 +237,9 @@ firebase.auth().onAuthStateChanged(function (user) {
   var database_ref = database.ref(`users/${user.uid}/last_login`);
   var database_bulck = database.ref(`users/${user.uid}`);
 
+  if (user) {
+    outlog.classList.toggle("hidden");
+  }
   // Create User data
   // console.log(database_ref.child("users/" + user.uid));
   database_ref
