@@ -427,18 +427,19 @@ li p {
 .custom-shape-divider-bottom-1656348997 {
   z-index: -1;
   opacity: 50%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  height: 70%;
+  height: 100%;
+  /* background-color: red; */
 }
 
 .custom-shape-divider-bottom-1656348997 svg {
-  position: relative;
+  position: absolute;
   display: block;
   width: calc(147% + 1.3px);
   height: 70%;
