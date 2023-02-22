@@ -323,7 +323,7 @@ li button:hover {
   min-height: 5rem;
   margin: 2rem;
   margin-bottom: 0;
-  max-height: 20rem;
+  max-height: 70vh;
   overflow: auto;
 }
 
