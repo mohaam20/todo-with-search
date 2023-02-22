@@ -11,19 +11,7 @@
 body {
   max-height: 100vh;
 }
-#outa {
-  cursor: pointer;
-  color: rgb(255, 113, 113);
-  position: absolute;
-  z-index: 9;
-  font-size: 1.5rem;
-  margin: 1rem;
-  left: 100%;
-  transform: translateX(-150%);
-  align-items: center;
 
-  font-family: "Fredoka One", cursive;
-}
 .regCont {
   align-items: center;
   display: flex;
@@ -53,23 +41,10 @@ body {
   padding: 0.5rem;
   width: 100%;
 }
-.reg {
-  font-family: "Fredoka One", cursive;
-  font-weight: 200;
-  font-size: 10px;
-  display: flex;
-  gap: 0.2rem;
-  position: relative;
-  padding: 2rem;
-  width: 100%;
-}
 
-.reg h1 {
-  cursor: pointer;
-}
 .container {
   position: relative;
-  bottom: 3rem;
+  /* bottom: 3rem; */
   height: fit-content;
   display: flex;
   align-items: center;
@@ -113,10 +88,6 @@ body {
   align-items: center;
 }
 
-header {
-  margin: 2rem;
-}
-
 header h1 {
   font-size: 3rem;
   letter-spacing: 0.1em;
@@ -124,13 +95,46 @@ header h1 {
   text-transform: uppercase;
 }
 header {
-  bottom: 3rem;
-  margin: 2rem;
+  /* background-color: rebeccapurple; */
+  width: 100%;
+
+  /* bottom: 3rem; */
+  margin: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   height: 4rem;
+}
+
+#outa {
+  cursor: pointer;
+  color: rgb(255, 113, 113);
+  /* position: absolute; */
+  z-index: 9;
+  font-size: 1.5rem;
+  margin: 1rem;
+  left: 100%;
+  /* transform: translateX(-150%); */
+  align-items: center;
+
+  font-family: "Fredoka One", cursive;
+}
+.reg {
+  /* background-color: red; */
+  font-family: "Fredoka One", cursive;
+  font-weight: 200;
+  font-size: 10px;
+  display: flex;
+  gap: 0.2rem;
+  position: relative;
+  padding: 2rem;
+  width: fit-content;
+}
+
+.reg h1 {
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .form-pack {
@@ -323,7 +327,7 @@ li button:hover {
   min-height: 5rem;
   margin: 2rem;
   margin-bottom: 0;
-  max-height: 70vh;
+  max-height: 65vh;
   overflow: auto;
 }
 
@@ -490,12 +494,17 @@ li p {
 }
 
 #cloud {
+  height: 4rem;
   margin: 0 1rem;
 }
 @media only screen and (max-width: 767px) {
   header {
+    justify-content: space-between;
     margin-top: 2rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-size: 18px;
   }
   li {
     width: 100%;
@@ -514,8 +523,8 @@ li p {
     height: calc(100% - 5rem);
   }
   .form-pack {
-    width: 80vw !important;
-    max-width: 80vw;
+    width: calc(80vw - 5rem);
+    max-width: 50vw;
   }
   body {
     overflow-y: hidden;
@@ -553,7 +562,11 @@ li p {
 }
 
 @media (hover: none) and (pointer: coarse) {
+  #outa {
+    font-size: 10px;
+  }
   header {
+    padding: 1rem;
     margin-top: 2rem;
     margin-bottom: 0;
   }
@@ -574,8 +587,8 @@ li p {
     height: calc(100% - 5rem);
   }
   .form-pack {
-    width: 80vw !important;
-    max-width: 80vw;
+    width: calc(80vw - 5rem);
+    max-width: 50vw;
   }
   body {
     overflow-y: hidden;
@@ -614,5 +627,20 @@ li p {
   .custom-shape-divider-bottom-1656379681 svg {
     width: calc(147% + 1.3px);
     height: 254px;
+  }
+}
+/** For mobile devices **/
+@media (max-width: 690px) {
+  .custom-shape-divider-bottom-1656379681 svg {
+    width: calc(147% + 1.3px);
+    height: 254px;
+  }
+  .reg h1 {
+    font-size: 10px !important;
+  }
+  .tops {
+    flex-wrap: nowrap;
+    transform: scale(0.7);
+    height: 5vh;
   }
 }
