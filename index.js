@@ -205,6 +205,7 @@ function updateBase() {
   console.log(hold);
   console.log(localStorage.getItem("checked") || JSON.stringify([]));
   if (finall !== hold) {
+    console.log("we are here");
     let inst = Date.now();
     localStorage.setItem("lastLocal", inst);
     lastUpdate = inst;
